@@ -163,7 +163,7 @@
                 </div>
                 <div class="menu-item">
                     <span class="symbol">~</span> 
-                    <a onclick="copyEmail(this)">[ contact ]</a>
+                    <a href="https://bsky.app/profile/nullracoon.bsky.social" target="_blank">[ bluesky / contact ]</a>
                 </div>
             </nav>
 
@@ -185,20 +185,6 @@
         function toggleBio() {
             document.getElementById('bio-content').classList.toggle('bio-expanded');
         }
-
-        function copyEmail(element) {
-            const email = "hikaru@example.com"; // Set your real email here
-            navigator.clipboard.writeText(email).then(() => {
-                const originalText = element.innerText;
-                element.innerText = "[ copied! ]";
-                element.classList.add('copy-success');
-                setTimeout(() => {
-                    element.innerText = originalText;
-                    element.classList.remove('copy-success');
-                }, 2000);
-            });
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('snow-container');
             for (let i = 0; i < 70; i++) {
@@ -217,3 +203,4 @@
     </script>
 </body>
 </html>
+
