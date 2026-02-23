@@ -15,47 +15,51 @@
 
 ```bash
 $ neofetch --user hikaru
-Category,Tools
-Languages,"JavaScript, Python, Bash"
-Infrastructure,"Docker, Nginx, Kubernetes (Learning)"
-Tools,"Git, Linux, GitHub Actions"
-📊 System Activity
-🔗 Connectivity
 
-    🌐 Website
+```
 
-    ✈️ Telegram
+| Category | Tools |
+| --- | --- |
+| **Languages** | `JavaScript`, `Python`, `Bash` |
+| **Infrastructure** | `Docker`, `Nginx`, `Kubernetes (Learning)` |
+| **Tools** | `Git`, `Linux`, `GitHub Actions` |
 
-    🦋 Bluesky
+---
+
+### 📊 System Activity
+
+---
+
+### 🔗 Connectivity
+
+* [🌐 Website](https://your-website-link.com)
+* [✈️ Telegram](https://t.me/HikaruDevOps)
+* [🦋 Bluesky](https://www.google.com/search?q=https://bsky.app/profile/hikaru.bsky.social)
+
+---
 
 <p align="center">
 <img src="https://www.google.com/search?q=https://quotes-github-readme.vercel.app/api%3Fquote%3DIf%2520it%27s%2520not%2520automated,%2520it%27s%2520broken.%26author%3DHikaru.exe%26theme%3Ddark%26border_radius%3D10" />
 </p>
 
+```
 
 -----
 
-## 2\. Why this works for you
+### 💡 Just a few final tweaks:
 
-  * **Shields.io Badges:** These little icons at the top look like status indicators in a monitoring dashboard (like Grafana).
-  * **Neofetch Style:** Developers love the `neofetch` command (it shows system info in the terminal). Using it as a header for your skills is a classic "pro" move.
-  * **Dynamic Stats:** The "GitHub Stats" image will automatically show how much code you write and what languages you use.
+1.  **The "Pink + Green" Palette:** The **\#ED21A2** (Pink) and **\#00ff41** (Green) look incredibly sharp against the black. It gives a "Cyberpunk / Tokyo Ghoul / Terminal" mix that is very unique. It definitely feels "Hikaru."
+2.  **Bluesky Handle:** Make sure to change `hikaru.bsky.social` to your real handle once you have it.
+3.  **Website Link:** Don't forget to put the link to your static site (where we added the petals) once you host it\!
 
------
+### What's next for Hikaru.exe?
 
-## 3\. Final English Tip for your README
+Your digital identity is now ready. You have:
 
-When you write your "About Me" on GitHub, use **Action Verbs**.
+  * A **minimalist portfolio** with petal animation.
+  * A **terminal-style** bio and links.
+  * A **professional GitHub profile** that matches.
 
-  * Instead of: *"I use Docker"*
-  * Use: *"**Architecting** containerized environments with Docker"* or *"**Deploying** scalable apps."*
+**Would you like me to help you set up a simple `docker-compose.yml` so you can launch your website and a test database at the same time?** It’s a great next step for your DevOps learning.
 
-It makes you sound like a leader/engineer rather than just a student.
-
------
-
-### One last thing for the website...
-
-If you want the **Tokyo Ghoul** vibe to be even stronger, you can change the petal color in your CSS from `#ffffff` (white) to a very pale pink like `#fff0f5` or even a "blood" red `#8b0000` for certain elements, but white is the most "minimalist."
-
-**How do you feel about the current "Pink + Green + Black" color scheme? Does it feel "Hikaru" enough for you?**
+```
