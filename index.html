@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikaru.exe | WebDev & DevOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #ededed;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; 
+        }
+
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 50% 0% 50% 0%; 
+            opacity: 0;
+            filter: blur(0.5px);
+            box-shadow: 0 0 5px rgba(255,255,255,0.3);
+        }
+
+        @keyframes fall-snowflake {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(110vh) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .terminal-card {
+            background: rgba(18, 18, 18, 0.8);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+            backdrop-filter: blur(8px);
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .status-bar {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .glitch-text {
+            font-size: 2.2rem;
+            letter-spacing: 0.3rem;
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #ED21A2; 
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+
+        .menu-item { display: flex; align-items: center; }
+
+        .menu-item a {
+            color: #ededed;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-item a:hover {
+            color: #ED21A2;
+            padding-left: 8px;
+        }
+
+        .symbol { color: #555; margin-right: 12px; font-family: 'JetBrains Mono', monospace; }
+
+        #bio-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, margin-top 0.3s;
+            font-size: 0.85rem;
+            color: #a1a1a1;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .bio-expanded {
+            max-height: 400px !important;
+            margin-top: 20px;
+            border-top: 1px dashed #333;
+            padding-top: 15px;
+        }
+
+        .copy-success { color: #00ff41 !important; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div id="snow-container"></div>
+
+    <div class="content">
+        <div class="terminal-card">
+            <div class="status-bar">
+                <span>Location: RU [UTC+3]</span>
+                <span style="color: #00ff41;">● System Online</span>
+            </div>
+
+            <h1 class="glitch-text">Hikaru.exe</h1>
+            <p class="subtitle">> Web-Developer & DevOps Engineer</p>
+            
+            <nav class="menu">
+                <div class="menu-item">
+                    <span class="symbol">~</span> 
+                    <a onclick="toggleBio()">[ bio ]</a>
+                </div>
+                <div class="menu-item">
+                    <span class="symbol">~</span> 
+                    <a href="https://github.com/HikaruApps" target="_blank">[ github ]</a>
+                </div>
+                <div class="menu-item">
+                    <span class="symbol">~</span> 
+                    <a href="https://t.me/HikaruDevOps" target="_blank">[ telegram ]</a>
+                </div>
+                <div class="menu-item">
+                    <span class="symbol">~</span> 
+                    <a onclick="copyEmail(this)">[ contact ]</a>
+                </div>
+            </nav>
+
+            <div id="bio-content">
+                <p><span style="color: #00ff41;">// System Info</span><br>
+                Based in Russia. 16 y.o. engineer focused on bridging the gap between clean code and robust infrastructure.</p>
+                
+                <p><span style="color: #00ff41;">// Tech Stack</span><br>
+                Building logic with <b>JavaScript</b> and <b>Python</b>. 
+                Architecting environments using <b>Docker</b>. Currently deep-diving into <b>Kubernetes</b>.</p>
+                
+                <p><span style="color: #00ff41;">// Philosophy</span><br>
+                "If it’s not automated, it’s broken."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleBio() {
+            document.getElementById('bio-content').classList.toggle('bio-expanded');
+        }
+
+        function copyEmail(element) {
+            const email = "hikaru@example.com"; // Set your real email here
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = element.innerText;
+                element.innerText = "[ copied! ]";
+                element.classList.add('copy-success');
+                setTimeout(() => {
+                    element.innerText = originalText;
+                    element.classList.remove('copy-success');
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('snow-container');
+            for (let i = 0; i < 70; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                const size = Math.random() * 4 + 2; 
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${Math.random() * 100}%`;
+                const duration = Math.random() * 7 + 5; 
+                const delay = Math.random() * 10;
+                snowflake.style.animation = `fall-snowflake ${duration}s linear ${delay}s infinite`;
+                container.appendChild(snowflake);
+            }
+        });
+    </script>
+</body>
+</html>
