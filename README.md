@@ -39,7 +39,7 @@ $ neofetch --user hikaru
 ---
 
 <p align="center">
-<img src="https://quotes-github-readme.vercel.app/api?quote=If%20it's%20not%20automated,%20it's%20broken.&author=Hikaru.exe&theme=dark&border_radius=10" />
+<img src="https://quotes-github-readme.vercel.app/api?quote=If%20it's%20not%20automated,%20it's%20broken.&author=Hikaru.exe&theme=dark&border_radius=10&layout=google" />
 </p>
 
 ```
