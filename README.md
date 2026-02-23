@@ -32,9 +32,9 @@ $ neofetch --user hikaru
 
 ### 🔗 Connectivity
 
-* [🌐 Website](https://your-website-link.com)
+* [🌐 Website](https://hikaruapps.github.io/Hikaru.exe---WebPortfolio/)
 * [✈️ Telegram](https://t.me/HikaruDevOps)
-* [🦋 Bluesky](https://www.google.com/search?q=https://bsky.app/profile/hikaru.bsky.social)
+* [🦋 Bluesky](https://bsky.app/profile/nullracoon.bsky.social)
 
 ---
 
